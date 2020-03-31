@@ -87,7 +87,7 @@
                             android:layout_marginStart="15dp"
                             android:layout_marginEnd="5dp"
                             android:background="@null"
-                            android:fontFamily="@font/montserrat_medium"
+                            android:fontFamily="@font/iransans"
                             android:hint="@string/search_country"
                             android:textColor="@color/search_bar_color"
                             android:textColorHint="@color/search_bar_color"
@@ -124,31 +124,31 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="@+id/hamburgerImageView" />
 
-                    <ImageView
-                        android:id="@+id/bannerImage"
-                        android:layout_width="0dp"
-                        android:layout_height="0dp"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginTop="25dp"
-                        android:layout_marginEnd="15dp"
-                        android:visibility="visible"
-                        app:layout_constraintDimensionRatio="2:1"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/hamburgerImageView" />
+<!--                    <ImageView-->
+<!--                        android:id="@+id/bannerImage"-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="0dp"-->
+<!--                        android:layout_marginStart="15dp"-->
+<!--                        android:layout_marginTop="25dp"-->
+<!--                        android:layout_marginEnd="15dp"-->
+<!--                        android:visibility="visible"-->
+<!--                        app:layout_constraintDimensionRatio="2:1"-->
+<!--                        app:layout_constraintEnd_toEndOf="parent"-->
+<!--                        app:layout_constraintStart_toStartOf="parent"-->
+<!--                        app:layout_constraintTop_toBottomOf="@+id/hamburgerImageView" />-->
 
-                    <TextView
+                    <com.parassidhu.coronavirusapp.ui.custom.CustomTextView
                         android:id="@+id/worldStatistics"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
                         android:layout_marginTop="20dp"
                         android:fontFamily="@font/montserrat_bold"
                         android:text="@string/stat_heading"
                         android:textColor="@color/white"
                         android:textSize="16sp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/bannerImage" />
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/searchImageView" />
 
                     <LinearLayout
                         android:id="@+id/barContainer"
@@ -204,22 +204,20 @@
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
 
-                            <TextView
+                            <com.parassidhu.coronavirusapp.ui.custom.CustomTextView
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="2"
-                                android:fontFamily="@font/helvetica"
                                 android:text="@string/confirmed"
                                 android:textColor="@color/white"
                                 android:textSize="16sp" />
 
-                            <TextView
+                            <com.parassidhu.coronavirusapp.ui.custom.CustomTextViewBold
                                 android:id="@+id/confirmedCount"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginEnd="18dp"
                                 android:layout_weight="1"
-                                android:fontFamily="@font/montserrat_bold"
                                 android:gravity="end"
                                 android:textColor="@color/white"
                                 android:textSize="16sp"
@@ -238,7 +236,7 @@
                             android:layout_marginTop="20dp"
                             android:orientation="horizontal">
 
-                            <TextView
+                            <com.parassidhu.coronavirusapp.ui.custom.CustomTextView
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="2"
@@ -247,7 +245,7 @@
                                 android:textColor="@color/white"
                                 android:textSize="16sp" />
 
-                            <TextView
+                            <com.parassidhu.coronavirusapp.ui.custom.CustomTextViewBold
                                 android:id="@+id/recoveredCount"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
@@ -272,22 +270,20 @@
                             android:layout_marginTop="20dp"
                             android:orientation="horizontal">
 
-                            <TextView
+                            <com.parassidhu.coronavirusapp.ui.custom.CustomTextView
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="2"
-                                android:fontFamily="@font/helvetica"
                                 android:text="@string/death"
                                 android:textColor="@color/white"
                                 android:textSize="16sp" />
 
-                            <TextView
+                            <com.parassidhu.coronavirusapp.ui.custom.CustomTextViewBold
                                 android:id="@+id/deathCount"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginEnd="18dp"
                                 android:layout_weight="1"
-                                android:fontFamily="@font/montserrat_bold"
                                 android:gravity="end"
                                 android:textColor="@color/white"
                                 android:textSize="16sp"
@@ -314,17 +310,17 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/worldStatsContainer" />
 
-                    <TextView
+                    <com.parassidhu.coronavirusapp.ui.custom.CustomTextView
                         android:id="@+id/todaysStats"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
                         android:layout_marginTop="15dp"
                         android:fontFamily="@font/montserrat_bold"
                         android:text="@string/list_heading"
                         android:textColor="@color/white"
                         android:textSize="16sp"
-                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/divider" />
 
                     <androidx.constraintlayout.widget.Group

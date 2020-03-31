@@ -99,10 +99,10 @@ class OverviewFragment : BaseFragment(), AppBarLayout.OnOffsetChangedListener,
                 }
 
                 override fun onResourceReady(resource: Bitmap, transition: Transition<in Bitmap>?) {
-                    bannerImage.setImageBitmap(resource)
+//                    bannerImage.setImageBitmap(resource)
                     val set = ConstraintSet()
                     set.clone(rootLayout)
-                    set.setDimensionRatio(bannerImage.id, randomItem.ratio)
+//                    set.setDimensionRatio(bannerImage.id, randomItem.ratio)
                     set.applyTo(rootLayout)
                 }
             })
@@ -197,7 +197,7 @@ class OverviewFragment : BaseFragment(), AppBarLayout.OnOffsetChangedListener,
         hamburgerImageView.isInvisible = flag
         searchImageView.isInvisible = flag
         toolbarViews.isVisible = !flag
-        bannerImage.isVisible = !flag
+//        bannerImage.isVisible = !flag
         titleLogo.isVisible = !flag
         swipeToRefresh.isEnabled = !flag
 
@@ -237,7 +237,7 @@ class OverviewFragment : BaseFragment(), AppBarLayout.OnOffsetChangedListener,
     override fun logEvent(query: String) {
         val params = Bundle()
         params.putString("query", query)
-        firebaseAnalytics.logEvent("search_query", params)
+//        firebaseAnalytics.logEvent("search_query", params)
     }
 
     override fun onPinClick(response: BaseCountryResponse, isPinned: Boolean) {

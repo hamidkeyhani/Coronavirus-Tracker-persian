@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.google.firebase.remoteconfig.FirebaseRemoteConfig
+//import com.google.firebase.remoteconfig.FirebaseRemoteConfig
 import com.google.gson.Gson
 import com.parassidhu.coronavirusapp.network.response.*
 import com.parassidhu.coronavirusapp.util.*
@@ -13,7 +13,6 @@ import javax.inject.Inject
 
 class MainViewModel @Inject constructor(
     private val repo: MainRepo,
-    private val remoteConfig: FirebaseRemoteConfig,
     private val gson: Gson
 ): ViewModel() {
 
@@ -107,12 +106,12 @@ class MainViewModel @Inject constructor(
 
     fun getBanners() {
         viewModelScope.launch {
-            remoteConfig.fetchAndActivate().addOnCompleteListener { task ->
-                if (task.isComplete) {
-                    val data = remoteConfig.getString(Constants.BANNER_JSON)
-                    _bannerResponse.value = gson.fromJson<BannerResponse>(data).data
-                }
-            }
+//            remoteConfig.fetchAndActivate().addOnCompleteListener { task ->
+//                if (task.isComplete) {
+////                    val data = remoteConfig.getString(Constants.BANNER_JSON)
+//                    _bannerResponse.value = gson.fromJson<BannerResponse>(data).data
+//                }
+//            }
         }
     }
 

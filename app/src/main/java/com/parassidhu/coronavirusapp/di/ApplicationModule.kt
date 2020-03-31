@@ -2,7 +2,7 @@ package com.parassidhu.coronavirusapp.di
 
 import android.app.Application
 import android.content.Context
-import com.google.firebase.analytics.FirebaseAnalytics
+//import com.google.firebase.analytics.FirebaseAnalytics
 import com.parassidhu.coronavirusapp.CoronaApp
 import dagger.Module
 import dagger.Provides
@@ -21,9 +21,9 @@ class ApplicationModule(var app: CoronaApp) {
     @Singleton
     fun getContext(): Context = app
 
-    @Provides
-    @Singleton
-    fun provideFirebaseAnalytics(context: Context): FirebaseAnalytics {
-        return FirebaseAnalytics.getInstance(context)
-    }
+//    @Provides
+//    @Singleton
+//    fun provideFirebaseAnalytics(context: Context): FirebaseAnalytics {
+//        return FirebaseAnalytics.getInstance(context)
+//    }
 }

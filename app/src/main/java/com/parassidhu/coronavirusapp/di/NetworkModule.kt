@@ -3,9 +3,9 @@ package com.parassidhu.coronavirusapp.di
 import com.bumptech.glide.load.model.GlideUrl
 import com.bumptech.glide.load.model.LazyHeaders
 import com.facebook.stetho.okhttp3.StethoInterceptor
-import com.google.firebase.ktx.Firebase
-import com.google.firebase.remoteconfig.FirebaseRemoteConfig
-import com.google.firebase.remoteconfig.ktx.remoteConfig
+//import com.google.firebase.ktx.Firebase
+//import com.google.firebase.remoteconfig.FirebaseRemoteConfig
+//import com.google.firebase.remoteconfig.ktx.remoteConfig
 import com.google.gson.Gson
 import dagger.Module
 import dagger.Provides
@@ -108,9 +108,9 @@ class NetworkModule {
         return Gson()
     }
 
-    @Provides
-    @Singleton
-    fun getFirebaseRemoteConfig(): FirebaseRemoteConfig {
-        return Firebase.remoteConfig
-    }
+//    @Provides
+//    @Singleton
+//    fun getFirebaseRemoteConfig(): FirebaseRemoteConfig {
+//        return Firebase.remoteConfig
+//    }
 }
