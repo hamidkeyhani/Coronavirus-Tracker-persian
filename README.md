@@ -22,6 +22,7 @@ Corona Tracker is written in Kotlin and makes use of KTX, Coroutines, Dagger2, R
 4. That's it! You're good to go :)
 
 You can download the apk(original version) <a href="https://github.com/sidhuparas/Coronavirus-Tracker/blob/master/app-release.apk">here</a>.
+
 You can download the apk(persian version) <a href="coronaTrackerPersian.apk">here</a>.
 
 # Credits
