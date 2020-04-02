@@ -193,7 +193,6 @@ class OverviewFragment : BaseFragment(), AppBarLayout.OnOffsetChangedListener,
     }
 
     private fun showSearch(flag: Boolean) {
-        Toast.makeText(context, "showSearch -> $flag", Toast.LENGTH_SHORT).show()
         searchBar.isInvisible = !flag
         backButton.isInvisible = !flag
         hamburgerImageView.isInvisible = flag
