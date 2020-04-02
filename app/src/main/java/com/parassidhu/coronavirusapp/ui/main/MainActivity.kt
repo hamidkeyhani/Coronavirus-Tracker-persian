@@ -2,6 +2,7 @@ package com.parassidhu.coronavirusapp.ui.main
 
 import android.os.Bundle
 import android.view.MenuItem
+import android.widget.Toast
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
@@ -66,7 +67,6 @@ class MainActivity : BaseActivity() {
             when(item.itemId) {
                 R.id.action_overview -> handleOverviewAction()
             }
-
             return@setOnNavigationItemSelectedListener true
         }
     }
@@ -78,7 +78,6 @@ class MainActivity : BaseActivity() {
                 return
             }
         }
-
         activeFragment = overviewFragment
     }
 

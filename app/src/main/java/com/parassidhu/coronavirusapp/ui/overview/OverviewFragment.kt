@@ -10,6 +10,7 @@ import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintSet
 import androidx.core.view.isInvisible
 import androidx.core.view.isVisible
@@ -192,6 +193,7 @@ class OverviewFragment : BaseFragment(), AppBarLayout.OnOffsetChangedListener,
     }
 
     private fun showSearch(flag: Boolean) {
+        Toast.makeText(context, "showSearch -> $flag", Toast.LENGTH_SHORT).show()
         searchBar.isInvisible = !flag
         backButton.isInvisible = !flag
         hamburgerImageView.isInvisible = flag
@@ -212,11 +214,10 @@ class OverviewFragment : BaseFragment(), AppBarLayout.OnOffsetChangedListener,
     }
 
     fun handleBackPress(): Boolean {
-        if (searchEditText.isVisible) {
+        if (searchEditText.isFocused) {
             showSearch(false)
             return true
         }
-
         return false
     }
 
